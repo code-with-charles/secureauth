@@ -1,12 +1,61 @@
-# SecureAuth
+# 🔐 SecureAuth – Authentication & Authorization Microservice  
+Production-ready auth system built with **Node.js + Express + TypeScript + MongoDB Atlas**.
 
-Secure authentication/authorization microservice (Node.js + Express + TypeScript + MongoDB Atlas)
+SecureAuth is a complete authentication service designed for real-world applications that need secure registration/login, JWT access tokens, rotating refresh tokens, OAuth login (Google + GitHub), RBAC, secure session handling, rate limiting, and more.
 
-## Requirements
-- Node.js >= 18
-- npm
-- MongoDB Atlas URL (or local mongo)
-- Optional: Redis, SendGrid
+---
+
+## 🚀 Features
+
+### 🔑 Authentication
+- Secure **registration** & **login** (bcrypt)
+- **Email verification** flow
+- **Password reset** with secure token
+- **Account lockout** after too many failed attempts
+- Rate-limited auth endpoints (brute-force protection)
+
+### 🔐 Token System (Best Practices)
+- **Short-lived access tokens** (15 min)
+- **Long-lived refresh tokens** (30 days)
+- **Rotating refresh tokens** with stored session metadata
+- **Reuse detection** (invalidates all sessions on theft attempt)
+- HttpOnly cookies supported
+
+### 🧑‍💼 RBAC – Role-Based Access Control
+- Built-in roles: `admin`, `manager`, `user`
+- Fine-grained permission middleware:
+  - `requireRole(...)`
+  - `requirePermission(...)`
+
+### 🌍 OAuth2 Login
+- Google OAuth
+- GitHub OAuth
+
+### 📦 Database (MongoDB Atlas)
+- Users
+- Refresh Tokens (hashed)
+- Roles
+- Permissions
+- Optional Audit Logs
+- Optional Redis token blacklist
+
+### 🛡 Security
+- Helmet, CORS (configurable), rate-limits
+- Joi/Zod input validation
+- bcrypt hashing
+- Sanitization (xss-clean / express-mongo-sanitize)
+- Follows OWASP API Security guidelines
+
+### ⚙ Developer Experience
+- Fully typed TypeScript codebase
+- Well-structured modular architecture
+- Dockerfile + docker-compose
+- Jest + Supertest tests (80% coverage target)
+- GitHub Actions CI (lint, test, build)
+- OpenAPI (Swagger) spec included
+- Postman collection included
+
+
 
 ## Quick start (local)
 1. copy `.env.example` -> `.env` and fill values (MONGODB_ATLAS_URL required)
