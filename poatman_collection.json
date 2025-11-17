@@ -1,0 +1,12 @@
+{
+  "info": { "name": "SecureAuth API", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json" },
+  "item": [
+    { "name": "Register", "request": { "method": "POST", "header": [], "url": "{{baseUrl}}/api/auth/register" } },
+    { "name": "Login", "request": { "method": "POST", "url": "{{baseUrl}}/api/auth/login" } },
+    { "name": "Refresh", "request": { "method": "POST", "url": "{{baseUrl}}/api/auth/refresh" } },
+    { "name": "Logout", "request": { "method": "POST", "url": "{{baseUrl}}/api/auth/logout" } },
+    { "name": "Forgot", "request": { "method": "POST", "url": "{{baseUrl}}/api/auth/forgot-password" } },
+    { "name": "Reset", "request": { "method": "POST", "url": "{{baseUrl}}/api/auth/reset-password" } }
+  ],
+  "event": []
+}
