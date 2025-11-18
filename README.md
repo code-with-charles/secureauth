@@ -3,7 +3,8 @@ Production-ready auth system built with **Node.js + Express + TypeScript + Mongo
 
 SecureAuth is a complete authentication service designed for real-world applications that need secure registration/login, JWT access tokens, rotating refresh tokens, OAuth login (Google + GitHub), RBAC, secure session handling, rate limiting, and more.
 
----
+<img width="1403" height="364" alt="image" src="https://github.com/user-attachments/assets/4ebda3d5-95d6-4944-aa73-1fd9690eb575" />
+
 
 ## 🚀 Features
 
